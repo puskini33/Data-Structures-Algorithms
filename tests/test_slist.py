@@ -27,6 +27,42 @@ class TestClass(unittest.TestCase):
         assert colors.pop() == 'Magenta'
         assert colors.pop() is None
 
+    def test_shift(self):
+        colors = SingleLinkedList()
+        colors.shift("Cadium Orange")
+        assert colors.count() == 1
+
+        colors.shift("Carbazole Violet")
+        assert colors.count() == 2
+
+        assert colors.pop() == "Cadium Orange"
+        assert colors.count() == 1
+        assert colors.pop() == "Carbazole Violet"
+        assert colors.count() == 0
+
+    def test_unshift(self):
+        colors = SingleLinkedList()
+        colors.push('Viridian')
+        colors.push('Sap Green')
+        colors.push('Van Dyke')
+        assert colors.unshift() == 'Viridian'
+        assert colors.unshift() == 'Sap Green'
+        assert colors.unshift() == 'Van Dyke'
+        assert colors.unshift() is None
+
+    def test_remove(self):
+        colors = SingleLinkedList()
+        colors.push('Cobalt')
+        colors.push('Zinc White')
+        colors.push('Nickle Yellow')
+        colors.push('Perinone')
+        assert colors.remove('Cobalt') == 0
+        colors.dump('before perinone')
+        assert colors.remove('Perinone') == 2
+        colors.dump('after perinone')
+        assert colors.remove('Nickle Yellow') == 1
+        assert colors.remove('Zinc White') == 0
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

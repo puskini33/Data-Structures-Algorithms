@@ -54,7 +54,7 @@ class SingleLinkedList(object):
         removed_node = None
         if last_node is None:
             return None
-        elif last_node.next is None:  # pop begin
+        elif last_node.next is None:
             removed_node = self.begin
             self.begin = None
         else:
@@ -65,10 +65,26 @@ class SingleLinkedList(object):
         return removed_node.value
 
     def shift(self, obj):
-        """Another name for push."""
+        """Pushes at the beginning of the list."""
+        node = SingleLinkedListNode(obj, None)
+        if self.begin is None:
+            self.begin = node
+        elif self.begin.next is None:
+            self.end = self.begin
+            self.begin = node
+            self.begin.next = self.end
+        else:
+            node.next = self.begin
+            self.begin = node
 
     def unshift(self):
         """Removes the first item and returns it."""
+        if self.begin is None:
+            return None
+        else:
+            removed_node = self.begin.value
+            self.begin = self.begin.next
+            return removed_node
 
     def remove(self, obj):
         """Finds a matching item and removes it from the list."""
