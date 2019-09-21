@@ -21,6 +21,8 @@ class TestClass(unittest.TestCase):
         colors = SingleLinkedList()
         colors.push('Magenta')
         colors.push('Alizarin')
+        colors.push('Blue')
+        assert colors.pop() == 'Blue'
         assert colors.pop() == 'Alizarin'
         assert colors.pop() == 'Magenta'
         assert colors.pop() is None
