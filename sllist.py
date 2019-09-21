@@ -32,21 +32,19 @@ class SingleLinkedList(object):
     def __init__(self):
         self.begin = None
         self.end = None
-        self.before_last = None
 
     def push(self, obj: str):
         """Appends a new value at the end of the list."""
         node = SingleLinkedListNode(obj, None)
-        if self.begin is None:
+        if self.begin is None:  # no node in the list
             self.begin = node
-            assert self.begin is not None
-        elif self.begin.next is None:
+            self.end = self.begin
+        elif self.begin.next is None:  # there is only one node in the list
             self.end = node
             self.begin.next = self.end
-        else:
-            self.before_last = self.end
+        else:  # there are more than 1 node in the list
+            self.end.next = node
             self.end = node
-            self.before_last.next = self.end
 
     def pop(self) -> str or None:
         """Removes the last item and returns it."""
@@ -118,13 +116,21 @@ class SingleLinkedList(object):
 
     def first(self):
         """Returns a *reference* to the first item, does not remove."""
+        if self.begin is None:
+            return None
+        else:
+            return self.begin.value
 
     def last(self):
         """Returns a reference to the last item, does not remove."""
+        if self.end is None:
+            return None
+        else:
+            return self.end.value
 
     def count(self):
         """Counts the number of elements in the list."""
-        # This function takes a lot of time and is every time done
+        # This function takes a lot of time because it always runs from the beginning
         node = self.begin
         count = 0
         while node:
@@ -135,18 +141,16 @@ class SingleLinkedList(object):
 
     def get(self, index):
         """Get the value at index."""
+        node = self.begin
+        index_value = 0
+        while node:
+            if index_value == index:
+                return node.value
+            node = node.next
+            index_value += 1
 
     def dump(self, mark):
         """Debugging function that dumps the contents of the list."""
         return
 
-
-colors = SingleLinkedList()
-colors.push('Cobalt')
-colors.push('Zinc White')
-colors.push('Nickle Yellow')
-colors.push('Perinone')
-colors.remove('Nickle Yellow')  # 0
-colors.remove('Perinone')  # 2
-colors.remove('Zinc White')  # 0
 
