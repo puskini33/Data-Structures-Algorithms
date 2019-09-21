@@ -4,11 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c80d57b3-4e4c-45d2-912b-d287320a71db" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sllist.py" beforeDir="false" afterPath="$PROJECT_DIR$/sllist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_slist.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_slist.py" afterDir="false" />
-    </list>
+    <list default="true" id="c80d57b3-4e4c-45d2-912b-d287320a71db" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sllist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="146" column="26" selection-start-line="146" selection-start-column="26" selection-end-line="146" selection-end-column="26" />
+            <state relative-caret-position="5016">
+              <caret line="132" column="54" selection-start-line="132" selection-start-column="54" selection-end-line="132" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -254,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569088336037</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="# Added code for functions first(), last(), and get()">
+      <created>1569090560226</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1569090560226</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -340,17 +343,11 @@
     <MESSAGE value="# Test1" />
     <MESSAGE value="# Added code for functions: shift; unshift" />
     <MESSAGE value="# Added code for function remove" />
-    <option name="LAST_COMMIT_MESSAGE" value="# Added code for function remove" />
+    <MESSAGE value="# Added code for functions first(), last(), and get()" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Added code for functions first(), last(), and get()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/sllist.py</url>
-          <line>157</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -393,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sllist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="146" column="26" selection-start-line="146" selection-start-column="26" selection-end-line="146" selection-end-column="26" />
+        <state relative-caret-position="5016">
+          <caret line="132" column="54" selection-start-line="132" selection-start-column="54" selection-end-line="132" selection-end-column="54" />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,7 @@ except ImportError:
 
 config = {
     'description': 'First knowledge about Single Linked Lists',
-    'author': 'Elena',
+    'author': 'Elenaa',
     'version': '0.2',
     'name': 'Single_Linked_Lists_Project'
 }
