@@ -56,12 +56,11 @@ class TestClass(unittest.TestCase):
         colors.push('Zinc White')
         colors.push('Nickle Yellow')
         colors.push('Perinone')
-        assert colors.remove('Cobalt') == 0
-        colors.dump('before perinone')
+        assert colors.remove('Nickle Yellow') == 2
+        # colors.dump('before perinone')
         assert colors.remove('Perinone') == 2
-        colors.dump('after perinone')
-        assert colors.remove('Nickle Yellow') == 1
-        assert colors.remove('Zinc White') == 0
+        # colors.dump('after perinone')
+        assert colors.remove('Zinc White') == 1
 
 
 if __name__ == '__main__':

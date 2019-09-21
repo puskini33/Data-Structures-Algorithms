@@ -86,8 +86,35 @@ class SingleLinkedList(object):
             self.begin = self.begin.next
             return removed_node
 
-    def remove(self, obj):
+    def remove(self, obj: str):
         """Finds a matching item and removes it from the list."""
+        if self.begin is None:
+            return None
+        else:  # at least one node exists
+            node = self.begin
+            number_reference_node = 0
+            if self.begin.value == obj:  # searched item is in the first node
+                number_reference_node = 0
+                self.begin = self.begin.next
+                return number_reference_node
+
+            while node.next:  # searched item is in the second or in the following nodes
+                node_before_node = node
+                node = node.next
+                if node.next is not None:
+                    node_after_node = node.next
+
+                if node.value == obj and node.next is not None:  # if searched node is in the list
+                    node_before_node.next = node_after_node
+                    number_reference_node += 1
+                    return number_reference_node
+                elif node.value == obj and node.next is None:  # if searched node is at the end of list
+                    node_before_node.next = None
+                    number_reference_node += 1
+                    return number_reference_node
+
+                number_reference_node += 1
+            return number_reference_node
 
     def first(self):
         """Returns a *reference* to the first item, does not remove."""
@@ -97,7 +124,7 @@ class SingleLinkedList(object):
 
     def count(self):
         """Counts the number of elements in the list."""
-        # This function takes a lot of time and if every time done
+        # This function takes a lot of time and is every time done
         node = self.begin
         count = 0
         while node:
@@ -109,8 +136,17 @@ class SingleLinkedList(object):
     def get(self, index):
         """Get the value at index."""
 
-    def dump(self):
+    def dump(self, mark):
         """Debugging function that dumps the contents of the list."""
+        return
 
 
+colors = SingleLinkedList()
+colors.push('Cobalt')
+colors.push('Zinc White')
+colors.push('Nickle Yellow')
+colors.push('Perinone')
+colors.remove('Nickle Yellow')  # 0
+colors.remove('Perinone')  # 2
+colors.remove('Zinc White')  # 0
 
