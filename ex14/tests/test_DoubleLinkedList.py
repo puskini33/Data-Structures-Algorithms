@@ -34,6 +34,33 @@ class TestCase(unittest.TestCase):
         colors._invariant()
         assert colors.pop() is None
 
+    def test_shift(self):
+        colors = DoubleLinkedList()
+        colors.shift("Cadium Orange")
+        assert colors.count() == 1
+
+        colors.shift("Carbazole Violet")
+        assert colors.count() == 2
+
+        colors.shift("Carbazole Yellow")
+        assert colors.count() == 3
+
+        assert colors.pop() == "Cadium Orange"
+        assert colors.count() == 2
+        assert colors.pop() == "Carbazole Violet"
+        assert colors.count() == 1
+        assert colors.pop() == "Carbazole Yellow"
+        assert colors.count() == 0
+
+    def test_unshift(self):
+        colors = DoubleLinkedList()
+        colors.shift('Viridian')
+        colors.shift('Sap Green')
+        colors.shift('Van Dyke')
+        assert colors.unshift() == 'Van Dyke'
+        assert colors.unshift() == 'Sap Green'
+        assert colors.unshift() == 'Viridian'
+        assert colors.unshift() is None
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

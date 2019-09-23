@@ -72,10 +72,35 @@ class DoubleLinkedList(object):
             return returned_value
 
     def shift(self, obj):
-        """Actually just another name for push."""
+        """Appends a new value at the beginning of list."""
+        node = DoubleLinkedListNode(obj, None, None)
+        if self.begin is None:
+            self.begin = node
+            self.end = self.begin
+        elif self.begin == self.end:
+            self.begin.prev = node
+            node.next = self.begin
+            self.end = self.begin
+            self.begin = node
+        else:
+            self.begin.prev = node
+            node.next = self.begin
+            self.begin = node
 
     def unshift(self):
         """Removes the first item(from begin) and returns it."""
+        if self.begin is None:
+            return None
+        elif self.begin == self.end:
+            removed_value = self.begin.value
+            self.begin = None
+            self.end = None
+            return removed_value
+        else:
+            removed_value = self.begin.value
+            self.begin = self.begin.next
+            self.begin.prev = None
+            return removed_value
 
     def detach_node(self, node):
         """You'll need to use this operation sometimes, but mostly inside remove().
