@@ -25,20 +25,51 @@ def manually_introduce_nodes():
     print(node3)
 
 
-manually_introduce_nodes()
-
-
 class DoubleLinkedList(object):
 
     def __init__(self):
         self.begin = None
         self.end = None
 
-    def push(self, obj):
-        """Appends a new value on the end of the list."""
+    def _invariant(self):
+        if self.begin is None:
+            assert self.end is None
+        elif self.begin.next is None:
+            assert self.begin == self.end
+        elif self.begin.next is not None:
+            assert self.begin.prev is None
+            assert self.end.next is None
 
-    def pop(self):
+    def push(self, obj: str):
+        """Appends a new value on the end of the list."""
+        node = DoubleLinkedListNode(obj, None, None)
+        if self.begin is None:
+            self.begin = node
+            self.end = self.begin
+        elif self.end == self.begin:
+            self.end = node
+            self.begin.next = self.end
+            self.end.prev = self.begin
+            self._invariant()
+        else:
+            node.prev = self.end
+            self.end.next = node
+            self.end = node
+
+    def pop(self) -> str or None:
         """Removes the last item and returns it."""
+        if self.begin is None:
+            return None
+        elif self.end == self.begin:
+            returned_value = self.end.value
+            self.end = None
+            self.begin = None
+            return returned_value
+        else:
+            returned_value = self.end.value
+            self.end = self.end.prev
+            self.end.next = None
+            return returned_value
 
     def shift(self, obj):
         """Actually just another name for push."""
@@ -61,14 +92,16 @@ class DoubleLinkedList(object):
 
     def count(self):
         """Counts the number of elements in the list."""
+        node = self.begin
+        count = 0
+        while node:
+            node = node.next
+            count += 1
+
+        return count
 
     def get(self, index):
         """Get the value at index."""
 
     def dump(self, mark):
         """Debugging function that dumps the contents of the list."""
-
-
-def _invariant(node):
-    if node is None:
-        pass
