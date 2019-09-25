@@ -87,7 +87,7 @@ class DoubleLinkedList(object):
             node.next = self.begin
             self.begin = node
 
-    def unshift(self):
+    def unshift(self) -> None or str:
         """Removes the first item(from begin) and returns it."""
         if self.begin is None:
             return None
@@ -103,17 +103,45 @@ class DoubleLinkedList(object):
             return removed_value
 
     def detach_node(self, node):
-        """You'll need to use this operation sometimes, but mostly inside remove().
-        It should take a node, detach it from the list, whether the node is at the front, end, or the middle."""
+        """You'll need to use this operation sometimes, but mostly
+        inside remove(). It should take a node, and detach it from the
+        list, whether the node is at the front, end, or in the middle."""
+        if node == self.end:
+            self.pop()
+        elif node == self.begin:
+            self.unshift()
+        else:
+            node.next.prev = node.prev
+            node.prev.next = node.next
 
     def remove(self, obj):
-        """Finds a matching item and removes it from the list."""
+        """Finds a matching item and removes it from the list and returns the index of the removed node."""
+        count = 0
+        node = self.begin
+
+        while node:
+            if node.value == obj:
+                self.detach_node(node)
+                return count
+
+            node = node.next
+            count += 1
+
+        return -1
 
     def first(self):
         """Returns a *reference* to the first item, does not remove."""
+        if self.begin is None:
+            return None
+        else:
+            return self.begin.value
 
     def last(self):
         """Returns a reference to the last item, does not remove."""
+        if self.end is None:
+            return None
+        else:
+            return self.end.value
 
     def count(self):
         """Counts the number of elements in the list."""
@@ -127,6 +155,19 @@ class DoubleLinkedList(object):
 
     def get(self, index):
         """Get the value at index."""
+        node = self.begin
+        count = 0
+        while node:
+            if count == index:
+                return node.value
+            node = node.next
+            count += 1
 
     def dump(self, mark):
         """Debugging function that dumps the contents of the list."""
+        print(mark)
+        node = self.begin
+        while node:
+            print(node, " ", end='')
+            node = node.next
+        print()

@@ -28,7 +28,7 @@ class TestCase(unittest.TestCase):
         colors._invariant()
         assert colors.pop() == "Van Dyke"
         colors._invariant()
-        # assert colors.get(1) == "Alizarin"
+        assert colors.get(1) == "Alizarin"
         assert colors.pop() == "Alizarin"
         assert colors.pop() == "Magenta"
         colors._invariant()
@@ -61,6 +61,62 @@ class TestCase(unittest.TestCase):
         assert colors.unshift() == 'Sap Green'
         assert colors.unshift() == 'Viridian'
         assert colors.unshift() is None
+
+    def test_remove(self):
+        colors = DoubleLinkedList()
+        colors.push("Cobalt")
+        colors.push("Zinc White")
+        colors.push("Nickle Yellow")
+        colors.push("Perinone")
+        assert colors.remove("Cobalt") == 0
+        colors._invariant()
+        colors.dump("before perinone")
+        assert colors.remove("Perinone") == 2
+        colors._invariant()
+        colors.dump("after perinone")
+        assert colors.remove("Nickle Yellow") == 1
+        colors._invariant()
+        assert colors.remove("Zinc White") == 0
+        colors._invariant()
+
+    def test_first(self):
+        colors = DoubleLinkedList()
+        colors.push("Cadmium Red Light")
+        assert colors.first() == "Cadmium Red Light"
+        colors.push("Hansa Yellow")
+        assert colors.first() == "Cadmium Red Light"
+        colors.shift("Pthalo Green")
+        assert colors.first() == "Pthalo Green"
+
+    def test_last(self):
+        colors = DoubleLinkedList()
+        colors.push("Cadmium Red Light")
+        assert colors.last() == "Cadmium Red Light"
+        colors.push("Hansa Yellow")
+        assert colors.last() == "Hansa Yellow"
+        colors.shift("Pthalo Green")
+        assert colors.last() == "Hansa Yellow"
+
+    def test_get(self):
+        colors = DoubleLinkedList()
+        colors.push("Vermillion")
+        assert colors.get(0) == "Vermillion"
+        colors.push("Sap Green")
+        assert colors.get(0) == "Vermillion"
+        assert colors.get(1) == "Sap Green"
+        colors.push("Cadmium Yellow Light")
+        assert colors.get(0) == "Vermillion"
+        assert colors.get(1) == "Sap Green"
+        assert colors.get(2) == "Cadmium Yellow Light"
+        assert colors.pop() == "Cadmium Yellow Light"
+        assert colors.get(0) == "Vermillion"
+        assert colors.get(1) == "Sap Green"
+        assert colors.get(2) is None
+        colors.pop()
+        assert colors.get(0) == "Vermillion"
+        colors.pop()
+        assert colors.get(0) is None
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
