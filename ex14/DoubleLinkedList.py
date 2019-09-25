@@ -71,7 +71,7 @@ class DoubleLinkedList(object):
             self.end.next = None
             return returned_value
 
-    def shift(self, obj):
+    def shift(self, obj: str):
         """Appends a new value at the beginning of list."""
         node = DoubleLinkedListNode(obj, None, None)
         if self.begin is None:
@@ -102,7 +102,7 @@ class DoubleLinkedList(object):
             self.begin.prev = None
             return removed_value
 
-    def detach_node(self, node):
+    def detach_node(self, node: DoubleLinkedListNode):
         """You'll need to use this operation sometimes, but mostly
         inside remove(). It should take a node, and detach it from the
         list, whether the node is at the front, end, or in the middle."""
@@ -114,7 +114,7 @@ class DoubleLinkedList(object):
             node.next.prev = node.prev
             node.prev.next = node.next
 
-    def remove(self, obj):
+    def remove(self, obj: str) -> int:
         """Finds a matching item and removes it from the list and returns the index of the removed node."""
         count = 0
         node = self.begin
@@ -129,21 +129,21 @@ class DoubleLinkedList(object):
 
         return -1
 
-    def first(self):
+    def first(self) -> None or str:
         """Returns a *reference* to the first item, does not remove."""
         if self.begin is None:
             return None
         else:
             return self.begin.value
 
-    def last(self):
+    def last(self) -> None or str:
         """Returns a reference to the last item, does not remove."""
         if self.end is None:
             return None
         else:
             return self.end.value
 
-    def count(self):
+    def count(self) -> int:
         """Counts the number of elements in the list."""
         node = self.begin
         count = 0
@@ -153,7 +153,7 @@ class DoubleLinkedList(object):
 
         return count
 
-    def get(self, index):
+    def get(self, index: int):
         """Get the value at index."""
         node = self.begin
         count = 0
@@ -163,7 +163,7 @@ class DoubleLinkedList(object):
             node = node.next
             count += 1
 
-    def dump(self, mark):
+    def dump(self, mark: str):
         """Debugging function that dumps the contents of the list."""
         print(mark)
         node = self.begin
