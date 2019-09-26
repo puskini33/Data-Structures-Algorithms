@@ -47,7 +47,7 @@ class DoubleLinkedList(object):
             assert self.end.next is None
 
     def push(self, obj: str):
-        """Appends a new value on the end of the list."""
+        """Appends a new value at the end of the list."""
         node = DoubleLinkedListNode(obj, None, None)
         if self.begin is None:
             self.begin = node
