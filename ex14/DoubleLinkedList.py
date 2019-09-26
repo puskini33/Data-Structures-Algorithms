@@ -1,3 +1,9 @@
+"""
+Author: Elena Hirjoaba
+Date: 26.09.2019
+"""
+
+
 class DoubleLinkedListNode(object):
 
     def __init__(self, value, nxt, prev):
