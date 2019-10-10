@@ -13,14 +13,14 @@ class Dictionary(object):
         an index for the Map's buckets."""
         return hash(key) % self.map.count()  # an integer is generated that indexes the bucket
 
-    def get_bucket(self, key):
+    def set_bucket(self, key) -> int:
         """Given a key, find the bucket where it would go."""
         bucket_id = self.hash_key(key)  # given a key, the bucket ID is returned
         return self.map.get(bucket_id)  # returns the DLL object at the given index
 
     def get_slot(self, key, default=None) -> "bucket and node or bucket and None":
         """ Returns either the bucket and node for a slot, or None, None"""
-        bucket = self.get_bucket(key)  # the bucket is identified
+        bucket = self.set_bucket(key)  # the bucket is identified
 
         if bucket:
             node = bucket.begin  # the first node in the bucket is identified
@@ -36,7 +36,7 @@ class Dictionary(object):
         # fall through for both if and while above
         return bucket, None
 
-    def get(self, key, default=None):
+    def get_node_value(self, key, default=None):
         """Returns the value in a bucket for a given bucket_key, or the default(i.e., just the node)."""
         bucket, node = self.get_slot(key, default=default)
         return node and node.value[1] or node  # the node.value is returned
@@ -52,9 +52,11 @@ class Dictionary(object):
             # the key does not, append to create it
             bucket.push((key, value))
 
+        return key
+
     def delete(self, key):
         """Deletes the given key from the Map."""
-        bucket = self.get_bucket(key)
+        bucket = self.set_bucket(key)
         node = bucket.begin
 
         while node:
@@ -72,9 +74,3 @@ class Dictionary(object):
                 print(slot_node.value)
                 slot_node = slot_node.next
             bucket_node = bucket_node.next
-
-
-map_dictionaries = Dictionary()
-print(map_dictionaries.hash_key("cars"))
-map_dictionaries.get_bucket("cars")
-map_dictionaries.get("cars")
