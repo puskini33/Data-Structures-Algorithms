@@ -106,15 +106,18 @@ def merge_sort(numbers: 'DoubleLinkedList'):
 
 def merge_node(node: 'DoubleLinkedListNode') -> 'DoubleLinkedListNode':
     """Divides the list of nodes and finds the smallest unit in the list: the left node and the right node."""
-    counted = count_nodes(node)  # the number of nodes in the list
+    counted = count_nodes(node)  # change here. check for number of nodes less or keep count of nodes
     beginning_node = node
+
     if counted <= 1:
         return node
     else:
-        mid_index = counted // 2
-    for i in range(0, int(mid_index) - 1):
-        node = node.next  # get the last node of the first half of the list
+        mid_index = counted / 2
 
+    for i in range(0, int(mid_index) - 1):
+        node = node.next  # perhaps here find another way to get the last node
+
+    # Perhaps a change here
     begin_node_right = node.next
     node_end_left = node
     node_end_left.next = None
@@ -142,7 +145,7 @@ def merge(left: 'DoubleLinkedListNode', right: 'DoubleLinkedListNode') -> 'Doubl
         result = left
         result.next = merge(left.next, right)
 
-    result.next.prev = result
+    result.next.prev = result  # what does this do? can this be taken out?
     return result
 
 

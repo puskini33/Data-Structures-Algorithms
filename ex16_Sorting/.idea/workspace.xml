@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c686e2e-91d9-4ebb-9385-376b1de52895" name="Default Changelist" comment="# TEST">
-      <change afterPath="$PROJECT_DIR$/../ex17_Dictionary/dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ex17_Dictionary/tests/test_dictionary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex14/DoubleLinkedList.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex14/ex14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex14/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex14/tests/test_DoubleLinkedList.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/DLL_Code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/Queue_DS.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/Queue_wrapped.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/Stacks_DS.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/file" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/tests/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/tests/test_Queue_DS.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex15/tests/test_Stacks_DS.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex16/file" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex18_MeasuringPerformance/sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex18_MeasuringPerformance/tests/test_sorting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex13_SingleLinkedList/tests/test_sllist.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex13_SingleLinkedList/tests/test_sllist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex14_DoubleLinkedList/tests/test_DoubleLinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex14_DoubleLinkedList/tests/test_DoubleLinkedList.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting.py" beforeDir="false" afterPath="$PROJECT_DIR$/sorting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex17_Dictionary/tests/test_dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex17_Dictionary/tests/test_dictionary.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,20 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sorting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
+            <state relative-caret-position="3366">
               <caret line="198" column="20" selection-start-line="198" selection-start-column="20" selection-end-line="198" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_sorting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+            <state relative-caret-position="160">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -111,13 +104,28 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ex16_Sorting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex16_Sorting" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ex16_Sorting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex16_Sorting" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex17_Dictionary" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -133,7 +141,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sorting">
+  <component name="RunManager" selected="Python tests.pytest for test_sorting.TestCase">
     <configuration name="sorting" type="PythonConfigurationType" factoryName="Python">
       <module name="ex16" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,6 +193,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test_sorting.TestCase" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ex16" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sorting.TestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest for test_sorting.test_quick_sort" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="ex16" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,6 +240,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test_sorting.TestCase" />
         <item itemvalue="Python tests.pytest for test_sorting.test_quick_sort" />
         <item itemvalue="Python tests.pytest for test_Bubble_Sort.test_merge_sort" />
         <item itemvalue="Python tests.pytest in test_Bubble_Sort.py" />
@@ -263,6 +287,9 @@
     <history-entry file="pytest_for_test_sorting_test_quick_sort - 2019.10.03 at 20h 17m 47s.xml">
       <configuration name="pytest for test_sorting.test_quick_sort" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_sorting_TestCase - 2019.10.10 at 19h 51m 55s.xml">
+      <configuration name="pytest for test_sorting.TestCase" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,21 +302,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0890411" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.05111111" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9320337" weight="0.3511111" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.24222222" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" side_tool="true" visible="true" weight="0.14444445" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.06796628" side_tool="true" visible="true" weight="0.05111111" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.033333335" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -352,18 +378,8 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/codecs.py" />
     <entry file="file://$PROJECT_DIR$/sorting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
+        <state relative-caret-position="3366">
           <caret line="198" column="20" selection-start-line="198" selection-start-column="20" selection-end-line="198" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_sorting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -371,6 +387,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3026">
           <caret line="178" selection-start-line="178" selection-end-line="178" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

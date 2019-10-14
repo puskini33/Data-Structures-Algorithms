@@ -9,9 +9,8 @@ Date: 26.09.2019
 
 class TestCase(unittest.TestCase):
 
-    for i in 800:
-
-        def test_push(self):
+    def test_push(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors._invariant()
             colors.push('Pthalo Blue')
@@ -26,7 +25,8 @@ class TestCase(unittest.TestCase):
             assert colors.count() == 5
             colors._invariant()
 
-        def test_pop(self):
+    def test_pop(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.push("Magenta")
             colors._invariant()
@@ -41,7 +41,8 @@ class TestCase(unittest.TestCase):
             colors._invariant()
             assert colors.pop() is None
 
-        def test_shift(self):
+    def test_shift(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.shift("Cadium Orange")
             assert colors.count() == 1
@@ -59,7 +60,8 @@ class TestCase(unittest.TestCase):
             assert colors.pop() == "Carbazole Yellow"
             assert colors.count() == 0
 
-        def test_unshift(self):
+    def test_unshift(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.shift('Viridian')
             colors.shift('Sap Green')
@@ -69,7 +71,8 @@ class TestCase(unittest.TestCase):
             assert colors.unshift() == 'Viridian'
             assert colors.unshift() is None
 
-        def test_remove(self):
+    def test_remove(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.push("Cobalt")
             colors.push("Zinc White")
@@ -86,7 +89,8 @@ class TestCase(unittest.TestCase):
             assert colors.remove("Zinc White") == 0
             colors._invariant()
 
-        def test_first(self):
+    def test_first(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.push("Cadmium Red Light")
             assert colors.first() == "Cadmium Red Light"
@@ -95,7 +99,8 @@ class TestCase(unittest.TestCase):
             colors.shift("Pthalo Green")
             assert colors.first() == "Pthalo Green"
 
-        def test_last(self):
+    def test_last(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.push("Cadmium Red Light")
             assert colors.last() == "Cadmium Red Light"
@@ -104,7 +109,8 @@ class TestCase(unittest.TestCase):
             colors.shift("Pthalo Green")
             assert colors.last() == "Hansa Yellow"
 
-        def test_get(self):
+    def test_get(self):
+        for i in range(0, 800):
             colors = DoubleLinkedList()
             colors.push("Vermillion")
             assert colors.get(0) == "Vermillion"
@@ -124,8 +130,15 @@ class TestCase(unittest.TestCase):
             colors.pop()
             assert colors.get(0) is None
 
-        i = i + 1
-
 
 if __name__ == '__main__':
+    speed = TestCase()
+    speed.test_pop()
+    speed.test_unshift()
+    speed.test_shift()
+    speed.test_push()
+    speed.test_get()
+    speed.test_first()
+    speed.test_last()
+    speed.test_remove()
     unittest.main(verbosity=2)

@@ -42,3 +42,11 @@ def test_delete():
     map_buckets.set_key_to_value('fruit', 'banana')
     map_buckets.delete('fruit')
     assert map_buckets.get_node_value('fruit') is None
+
+
+if __name__ == '__main__':
+    test_hash_key()
+    test_get_bucket()
+    test_get_slot()
+    test_set_key_to_value()
+    test_delete()
