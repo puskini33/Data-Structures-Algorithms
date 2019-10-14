@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18d4d3f-88b4-48ee-b516-47474022a275" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ex18_MeasuringPerformance.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleLinkedList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Queue_DS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stacks_DS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sllist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sorting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_DoubleLinkedList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_Queue_DS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_Stacks_DS.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_sllist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_sorting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex13_SingleLinkedList/tests/test_sllist.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex13_SingleLinkedList/tests/test_sllist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex14_DoubleLinkedList/tests/test_DoubleLinkedList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex14_DoubleLinkedList/tests/test_DoubleLinkedList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex16_Sorting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex16_Sorting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex16_Sorting/sorting.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex16_Sorting/sorting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex17_Dictionary/tests/test_dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ex17_Dictionary/tests/test_dictionary.py" afterDir="false" />
-    </list>
+    <list default="true" id="b18d4d3f-88b4-48ee-b516-47474022a275" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +78,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex13_SingleLinkedList" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -182,6 +157,14 @@
       <option name="presentableId" value="Default" />
       <updated>1570725466366</updated>
     </task>
+    <task id="LOCAL-00001" summary="# Finished Measuring Performance">
+      <created>1571047012100</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571047012100</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -219,6 +202,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# Finished Measuring Performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Finished Measuring Performance" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex16_sorts/test_sorting_ZS.py">
