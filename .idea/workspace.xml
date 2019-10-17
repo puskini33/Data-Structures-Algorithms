@@ -2,12 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99188c17-4e03-4cd7-bb08-1aed032cfcb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ex18_MeasuringPerformance/Double_Linked_List.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex18_MeasuringPerformance/sorting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex18_MeasuringPerformance/tests/test_sorting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex18_MeasuringPerformance/tests/test_sorting_pytest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex16_Sorting/sorting.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex16_Sorting/sorting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex17_Dictionary/tests/test_dictionary.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex17_Dictionary/tests/test_dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/.idea/ex19_ImprovingPerformance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/DoubleLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/Stacks_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/sllist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/sllist_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/sllist_v3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/sllist_v4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/tests/test_DoubleLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/tests/test_Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/tests/test_Stacks_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/tests/test_dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/tests/test_sllist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/tests/test_sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ex19_ImprovingPerformance/trial_error.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex18_MeasuringPerformance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ex18_MeasuringPerformance/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +116,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ex13_SingleLinkedList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ex19_ImprovingPerformance" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

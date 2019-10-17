@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b18d4d3f-88b4-48ee-b516-47474022a275" name="Default Changelist" comment="" />
+    <list default="true" id="b18d4d3f-88b4-48ee-b516-47474022a275" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/.idea/ex19_ImprovingPerformance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/DoubleLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/Stacks_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/sllist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/tests/test_DoubleLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/tests/test_Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/tests/test_Stacks_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/tests/test_dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/tests/test_sllist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ex19_ImprovingPerformance/tests/test_sorting.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +29,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sorting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2023">
+              <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -78,7 +108,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ex13_SingleLinkedList" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,6 +213,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16227607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -228,13 +259,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_sorting_pytest.py" />
-    <entry file="file://$PROJECT_DIR$/sorting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_dictionary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -301,6 +325,13 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
         </state>
       </provider>
     </entry>

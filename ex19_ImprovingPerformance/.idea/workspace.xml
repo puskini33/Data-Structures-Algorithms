@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59b0fbff-f28f-4511-a87a-67d2f7d8c14b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ex19_ImprovingPerformance.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stacks_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Stacks_DS_v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sllist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sllist_v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sllist_v3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sllist_v4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sllist_v5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sorting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_DoubleLinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_Stacks_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_dictionary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_sllist.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_sorting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex18_MeasuringPerformance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex18_MeasuringPerformance/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Stacks_DS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_Stacks_DS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-388">
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>count</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sorting.py" />
+        <option value="$PROJECT_DIR$/../ex13_SingleLinkedList/sllist.py" />
+        <option value="$PROJECT_DIR$/trial_error.py" />
+        <option value="$PROJECT_DIR$/tests/test_sllist.py" />
+        <option value="$PROJECT_DIR$/sllist_v3.py" />
+        <option value="$PROJECT_DIR$/sllist_v4.py" />
+        <option value="$PROJECT_DIR$/sllist.py" />
+        <option value="$PROJECT_DIR$/tests/test_DoubleLinkedList.py" />
+        <option value="$PROJECT_DIR$/DoubleLinkedList_v1.py" />
+        <option value="$PROJECT_DIR$/DoubleLinkedList_v2.py" />
+        <option value="$PROJECT_DIR$/DoubleLinkedList_v3.py" />
+        <option value="$PROJECT_DIR$/DoubleLinkedList_v4.py" />
+        <option value="$PROJECT_DIR$/DoubleLinkedList.py" />
+        <option value="$PROJECT_DIR$/Stacks_DS.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1093" />
+    <option name="y" value="126" />
+    <option name="width" value="1594" />
+    <option name="height" value="542" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ex19_ImprovingPerformance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex19_ImprovingPerformance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ex19_ImprovingPerformance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex19_ImprovingPerformance" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PYTHON\code\LMPTHW3\ex19_ImprovingPerformance" />
+      <recent name="E:\PYTHON\code\LMPTHW3\ex13_SingleLinkedList" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.DoubleLinkedList">
+    <configuration name="DoubleLinkedList" type="PythonConfigurationType" factoryName="Python">
+      <module name="ex19_ImprovingPerformance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DoubleLinkedList.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sllist (1)" type="PythonConfigurationType" factoryName="Python">
+      <module name="ex19_ImprovingPerformance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sllist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_sllist.TestClass" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ex19_ImprovingPerformance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sllist.TestClass&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_sllist.TestClass.test_push" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ex19_ImprovingPerformance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sllist.TestClass.test_push&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_sllist.TestClass.test_remove" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ex19_ImprovingPerformance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_sllist.TestClass.test_remove&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in test_sllist.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ex19_ImprovingPerformance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_sllist.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.pytest for test_sllist.TestClass.test_push" />
+        <item itemvalue="Python tests.pytest for test_sllist.TestClass" />
+        <item itemvalue="Python tests.pytest for test_sllist.TestClass.test_remove" />
+        <item itemvalue="Python tests.pytest in test_sllist.py" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59b0fbff-f28f-4511-a87a-67d2f7d8c14b" name="Default Changelist" comment="" />
+      <created>1571047968266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571047968266</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="pytest_for_test_sllist_TestClass_test_push - 2019.10.14 at 17h 33m 47s.xml">
+      <configuration name="pytest for test_sllist.TestClass.test_push" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_sllist_TestClass_test_push - 2019.10.14 at 17h 33m 52s.xml">
+      <configuration name="pytest for test_sllist.TestClass.test_push" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_sllist_TestClass_test_push - 2019.10.14 at 19h 49m 15s.xml">
+      <configuration name="pytest for test_sllist.TestClass.test_push" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_sllist_py - 2019.10.14 at 19h 49m 23s.xml">
+      <configuration name="pytest in test_sllist.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_sllist_py - 2019.10.14 at 19h 59m 09s.xml">
+      <configuration name="pytest in test_sllist.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_sllist_py - 2019.10.14 at 20h 01m 08s.xml">
+      <configuration name="pytest in test_sllist.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_sllist_TestClass_test_remove - 2019.10.14 at 20h 01m 24s.xml">
+      <configuration name="pytest for test_sllist.TestClass.test_remove" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_sllist_TestClass_test_push - 2019.10.14 at 20h 05m 52s.xml">
+      <configuration name="pytest for test_sllist.TestClass.test_push" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_sllist_TestClass - 2019.10.14 at 20h 05m 59s.xml">
+      <configuration name="pytest for test_sllist.TestClass" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_sllist_TestClass_test_push - 2019.10.14 at 20h 48m 01s.xml">
+      <configuration name="pytest for test_sllist.TestClass.test_push" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14436248" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.112222224" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3188889" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sllist_v2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ex13_SingleLinkedList/sllist_v4.py" />
+    <entry file="file://$PROJECT_DIR$/../ex13_SingleLinkedList/sllist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../automate_boring_stuff/text_extractor_project/numbers_text_extractor.py" />
+    <entry file="file://$PROJECT_DIR$/../../automate_boring_stuff/7_finding_patterns_text.py" />
+    <entry file="file://$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex13_sllist/sllist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sllist_v5.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trial_error.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sllist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2514">
+          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_sllist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sllist_v4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sllist_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-260">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex19_tuning/dllist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-end-line="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="27" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinkedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2890">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_DoubleLinkedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1171">
+          <caret line="137" column="22" lean-forward="true" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="24" lean-forward="true" selection-end-line="174" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="24" lean-forward="true" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_dictionary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_sorting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-371">
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_Stacks_DS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-388">
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stacks_DS_v1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stacks_DS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
