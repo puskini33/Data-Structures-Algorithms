@@ -1,37 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59b0fbff-f28f-4511-a87a-67d2f7d8c14b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ex19_ImprovingPerformance.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleLinkedList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DoubleLinkedList_v4.py" afterDir="false" />
+    <list default="true" id="59b0fbff-f28f-4511-a87a-67d2f7d8c14b" name="Default Changelist" comment="# Upgrade Stacks and Queue">
       <change afterPath="$PROJECT_DIR$/Queue_DS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Queue_DS_v1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Stacks_DS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Stacks_DS_v1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sllist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sllist_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sllist_v3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sllist_v4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sllist_v5.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/sorting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_DoubleLinkedList.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/test_Queue_DS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/test_Stacks_DS.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/test_dictionary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_sllist.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/test_sorting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ex18_MeasuringPerformance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex18_MeasuringPerformance/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleLinkedList_v4.py" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinkedList_v4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,24 +23,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Stacks_DS.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_Queue_DS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="459">
+              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/test_Stacks_DS.py">
+        <entry file="file://$PROJECT_DIR$/Queue_DS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-388">
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1388">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Queue_DS_v1.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -76,6 +64,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Elena Hirjoaba &lt;49148004+puskini33@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -92,17 +85,20 @@
         <option value="$PROJECT_DIR$/DoubleLinkedList_v1.py" />
         <option value="$PROJECT_DIR$/DoubleLinkedList_v2.py" />
         <option value="$PROJECT_DIR$/DoubleLinkedList_v3.py" />
-        <option value="$PROJECT_DIR$/DoubleLinkedList_v4.py" />
         <option value="$PROJECT_DIR$/DoubleLinkedList.py" />
+        <option value="$PROJECT_DIR$/tests/test_Stacks_DS.py" />
         <option value="$PROJECT_DIR$/Stacks_DS.py" />
+        <option value="$PROJECT_DIR$/DoubleLinkedList_v4.py" />
+        <option value="$PROJECT_DIR$/Queue_DS.py" />
+        <option value="$PROJECT_DIR$/tests/test_Queue_DS.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1093" />
-    <option name="y" value="126" />
-    <option name="width" value="1594" />
-    <option name="height" value="542" />
+    <option name="x" value="876" />
+    <option name="y" value="102" />
+    <option name="width" value="1275" />
+    <option name="height" value="432" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -131,7 +127,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -274,6 +270,14 @@
       <option name="presentableId" value="Default" />
       <updated>1571047968266</updated>
     </task>
+    <task id="LOCAL-00001" summary="# Upgrade Single and DoubleLinked List">
+      <created>1571305619315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571305619315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -330,6 +334,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# Upgrade Single and DoubleLinked List" />
+    <option name="LAST_COMMIT_MESSAGE" value="# Upgrade Single and DoubleLinked List" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sorting.py">
@@ -438,13 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="24" lean-forward="true" selection-end-line="174" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -470,24 +471,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_Stacks_DS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Stacks_DS_v1.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Stacks_DS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="86">
+          <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_Stacks_DS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding>
+            <element signature="e#48#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinkedList_v4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="148" column="36" selection-start-line="148" selection-start-column="36" selection-end-line="148" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_Queue_DS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue_DS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1388">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue_DS_v1.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
