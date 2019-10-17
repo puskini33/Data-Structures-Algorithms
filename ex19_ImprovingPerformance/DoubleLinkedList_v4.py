@@ -1,7 +1,7 @@
 """
 Author: Elena Hirjoaba
-Date: 26.09.2019
-Changes: count() is removed; push(); pop(); shift() and unshift()
+Date: 10.17.2019
+Changes: count() is removed; push(); pop(); shift() and unshift() changed
 """
 
 
@@ -142,17 +142,11 @@ class DoubleLinkedList(object):
 
     def first(self) -> None or str:
         """Returns a *reference* to the first item, does not remove."""
-        if self.begin is None:
-            return None
-        else:
-            return self.begin.value
+        return self.begin and self.begin.value or None
 
     def last(self) -> None or str:
         """Returns a reference to the last item, does not remove."""
-        if self.end is None:
-            return None
-        else:
-            return self.end.value
+        return self.end and self.end.value or None
 
     def get(self, index: int):
         """Get the value at index."""

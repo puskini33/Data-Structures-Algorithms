@@ -1,7 +1,6 @@
 """
 Author: Elena Hirjoaba
 Date: 26.09.2019
-Changes: count() is removed; push(); pop(); shift() and unshift()
 """
 
 
@@ -37,7 +36,6 @@ class DoubleLinkedList(object):
     def __init__(self):
         self.begin = None
         self.end = None
-        self.count = 0
 
     def _invariant(self):
         if self.begin is None:
@@ -50,66 +48,64 @@ class DoubleLinkedList(object):
 
     def push(self, obj: str):
         """Appends a new value at the end of the list."""
-        if self.end:  # there is at least 1 node
-            node = DoubleLinkedListNode(obj, None, self.end)
+        node = DoubleLinkedListNode(obj, None, None)
+        if self.begin is None:
+            self.begin = node
+            self.end = self.begin
+        elif self.end == self.begin:
+            self.end = node
+            self.begin.next = self.end
+            self.end.prev = self.begin
+            self._invariant()
+        else:
+            node.prev = self.end
             self.end.next = node
             self.end = node
-        else:  # there is more than 1 node
-            self.begin = DoubleLinkedListNode(obj, None, None)
-            self.end = self.begin
-
-        self.count += 1
 
     def pop(self) -> str or None:
         """Removes the last item and returns it."""
-        if self.end:  # there is at least 1 node
-            value = self.end.value
-
-            if self.end == self.begin:  # there is 1 node
-                self.end = None
-                self.begin = None
-            else:  # there is more than 1 node
-                self.end = self.end.prev
-                self.end.next = None
-
-                if self.end == self.begin:
-                    # if there is 1 node left, make begin and end same
-                    self.begin.next = None
-
-            self.count -= 1  # keep count of the number of nodes
-            return value
-
-        else:
+        if self.begin is None:
             return None
+        elif self.end == self.begin:
+            returned_value = self.end.value
+            self.end = None
+            self.begin = None
+            return returned_value
+        else:
+            returned_value = self.end.value
+            self.end = self.end.prev
+            self.end.next = None
+            return returned_value
 
     def shift(self, obj: str):
         """Appends a new value at the beginning of list."""
-
-        if self.begin is None:  # there is no node in the list
-            self.begin = DoubleLinkedListNode(obj, None, None)
-            self.end = self.begin
-        else:  # there is at least 1 node in the list
-            node = DoubleLinkedListNode(obj, self.begin, None)
-            self.begin.prev = node
+        node = DoubleLinkedListNode(obj, None, None)
+        if self.begin is None:
             self.begin = node
-
-        self.count += 1
+            self.end = self.begin
+        elif self.begin == self.end:
+            self.begin.prev = node
+            node.next = self.begin
+            self.end = self.begin
+            self.begin = node
+        else:
+            self.begin.prev = node
+            node.next = self.begin
+            self.begin = node
 
     def unshift(self) -> None or str:
         """Removes the first item(from begin) and returns it."""
-        if self.begin is None:  # if there is no node
+        if self.begin is None:
             return None
+        elif self.begin == self.end:
+            removed_value = self.begin.value
+            self.begin = None
+            self.end = None
+            return removed_value
         else:
             removed_value = self.begin.value
-            if self.begin == self.end:  # if there is 1 node
-                self.begin = None
-                self.end = None
-
-            else:  # if there is more than 1 node
-                self.begin = self.begin.next
-                self.begin.prev = None
-
-            self.count -= 1
+            self.begin = self.begin.next
+            self.begin.prev = None
             return removed_value
 
     def detach_node(self, node: DoubleLinkedListNode):
@@ -123,7 +119,6 @@ class DoubleLinkedList(object):
         else:
             node.next.prev = node.prev
             node.prev.next = node.next
-            self.count -= 1
 
     def remove(self, obj: str) -> int:
         """Finds a matching item and removes it from the list and returns the index of the removed node."""
@@ -153,6 +148,16 @@ class DoubleLinkedList(object):
             return None
         else:
             return self.end.value
+
+    def count(self) -> int:
+        """Counts the number of elements in the list."""
+        node = self.begin
+        count = 0
+        while node:
+            node = node.next
+            count += 1
+
+        return count
 
     def get(self, index: int):
         """Get the value at index."""
