@@ -26,21 +26,6 @@ class BSTreeList(object):
         self.root = None
         self.count = 0
 
-    """def push(self, key, value):
-        # push is similar to get
-        node = BSTreeNode()
-        if self.root is None:  # there is 1 node
-            node = BSTreeNode(None, None, key, value, None)
-            self.root = node
-        elif: # there are 2 nodes?
-            pass
-        else:
-            if self.root.left is None:
-                self.root.left = node
-                # node.prev =
-            elif self.root.right is None:
-                self.root.right = node"""
-
     def _get(self, key, node):
         """Use this function for recursion"""
         pass
