@@ -119,11 +119,11 @@ class BSTreeList(object):
         if node:
             print(" " * indent, node.key, "=", node.value)
             if node.left:
-                print(" " * indent, "<", end="")
+                print(" " * indent, ">", end="")
                 self._list(node.left, indent+1)
 
             if node.right:
-                print(" " * indent, ">", end="")
+                print(" " * indent, "<", end="")
                 self._list(node.right, indent+1)
 
     def list(self, start=""):

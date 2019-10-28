@@ -21,6 +21,15 @@ class TestCase(unittest.TestCase):
         letters.set(3, 'G')
         assert letters.root.left.value == 'G'
 
+    def test_set_linked_list(self):
+        sorted_numbers = BSTreeList()
+        sorted_numbers.set(10, '10')
+        for i in range(9, 0, -1):
+            sorted_numbers.set(i, str(i))
+        for j in range(11, 20):
+            sorted_numbers.set(j, str(j))
+        sorted_numbers.list()
+
     def test_delete(self):
         letters = BSTreeList()
         letters.set(9, 'Z')
@@ -38,6 +47,3 @@ class TestCase(unittest.TestCase):
         letters.set(18, 'W')
         letters.set(33, 'Q')
         letters.delete(11)
-
-    def test_list(self):
-        pass
