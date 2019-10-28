@@ -14,19 +14,30 @@ class TestCase(unittest.TestCase):
     def test_set(self):
         letters = BSTreeList()
         letters.set(9, 'Z')
-        letters.set(6, 'A')
+        assert letters.root.key == 9
+        assert letters.root.value == 'Z'
+        letters.set(9, 'A')
+        assert letters.root.value == 'A'
         letters.set(3, 'G')
-        letters.set(4, 'F')
-        assert letters.set(1, 'L') == 5
+        assert letters.root.left.value == 'G'
 
     def test_delete(self):
-        pass
-
-    def test_find_minimum(self):
-        pass
-
-    def test_replace_node_in_parent(self):
-        pass
+        letters = BSTreeList()
+        letters.set(9, 'Z')
+        letters.delete(9)
+        assert letters.root is None
+        letters.set(9, 'Z')
+        letters.set(10, 'A')
+        letters.set(3, 'C')
+        assert letters.root.right
+        assert letters.root.left
+        letters.delete(3)
+        assert letters.root.left is None
+        letters.set(11, 'D')
+        letters.set(13, 'F')
+        letters.set(18, 'W')
+        letters.set(33, 'Q')
+        letters.delete(11)
 
     def test_list(self):
         pass
