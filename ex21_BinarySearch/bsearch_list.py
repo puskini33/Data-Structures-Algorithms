@@ -1,7 +1,8 @@
 # This is an implementation of the binary search for the python list.
 
 
-def _find_number(x, m, manual_list):
+def _find_number(x: int, m: int, manual_list: list) -> int or None:
+    """Function takes a list, finds the median, searches for a given value and returns the value or None."""
     if x == manual_list[m]:
         return x
     elif x != manual_list[m] and len(manual_list) == 1:
@@ -23,7 +24,8 @@ def _find_number(x, m, manual_list):
         return _find_number(x, m, new_list)
 
 
-def find_number(x, man_list):
+def find_number(x: int, man_list: list) -> int:
+    """Function takes a list, finds the median and calls its recursive function."""
     if len(man_list) % 2 == 0:
         m = len(man_list) // 2
     else:
