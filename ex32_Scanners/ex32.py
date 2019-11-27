@@ -43,6 +43,8 @@ class Scanner(object):
         print(self.list_tokens)
 
     def try_match(self, i: int, line: str):
+        """Given a list of possible tokens, returns the first one that matches the first token in the list
+        and removes it."""
         start = line[i:]  # take the unmatched string
         for regex, token in self.rules:  # for each set regex and token (tuple)
             compiled_regex = re.compile(regex)

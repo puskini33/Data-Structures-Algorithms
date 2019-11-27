@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99188c17-4e03-4cd7-bb08-1aed032cfcb6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex33/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex33_Parsers/Scanner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex33/ex33.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex33_Parsers/ex33.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex33/punypy_scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex33_Parsers/punypy_scanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex33_Parsers/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ex33_Parsers/Scanner.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ex20_BinarySearchTree/bstree.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="56" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ex33_Parsers/Scanner.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -89,10 +96,11 @@
         <option value="$PROJECT_DIR$/ex17_Dictionary/dictionary.py" />
         <option value="$PROJECT_DIR$/ex20_BinarySearchTree/bstree.py" />
         <option value="$PROJECT_DIR$/.git/COMMIT_EDITMSG" />
+        <option value="$PROJECT_DIR$/ex33_Parsers/Scanner.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="875" />
     <option name="y" value="101" />
     <option name="width" value="1275" />
@@ -170,7 +178,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24920969" />
@@ -238,6 +246,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="# Test" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.git/COMMIT_EDITMSG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ex17_Dictionary/dictionary.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -272,17 +287,17 @@
     <entry file="file://$PROJECT_DIR$/ex17_Dictionary/tests/test_dictionary.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.git/COMMIT_EDITMSG">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ex20_BinarySearchTree/bstree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ex33_Parsers/Scanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
