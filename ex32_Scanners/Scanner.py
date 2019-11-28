@@ -53,9 +53,12 @@ class Scanner(object):
             return ['ERROR', 'error']
 
     def skip(self, *what):
+        """Function evaluates if first element in the given list of tokens equals the first element
+        in the list of tokens of the object. If YES, it returns TRUE, if NOT, it pops the first element and
+        tries again, and returns False if also first new element does not match."""
         for x in what:
-            if x != token_id[0]:
-                token_id.pop(0)
+            if x != self.list_tokens[0]:
+                self.list_tokens.pop(0)
 
             tok = self.list_tokens[0]
             if tok[0] != x:
@@ -67,12 +70,14 @@ class Scanner(object):
 
     def push(self, rule_token):
         """Pushes a token back on the token stream so that a later peek or match will return it."""
-        for i in range(0, len(list_tokens)):
+        for i in range(0, len(self.list_tokens)):
             if rule_token[1] == self.list_tokens[i][0]:
                 continue
             else:
                 self.rules.append(rule_token)
 
+    def done(self):
+        return len(self.list_tokens) == 0
 
 
 code = [
