@@ -1,5 +1,6 @@
 import re
 
+
 class Scanner(object):
 
     def __init__(self, regex_rules: 'list of tuples', text_to_match: list):
@@ -34,39 +35,43 @@ class Scanner(object):
                 return token, start[:end], end  # return TOKEN
         return None, start, None
 
-    def match(self, token_id):
+    def match(self, token_id: str) -> list:
         """Given a list of possible tokens, returns the first one that matches the first token in the list
     and removes it."""
+        if token_id != 'INDENT':
+            self.ignore_ws()
 
-        if self.list_tokens[0][0] == token_id[0]:
+        if self.list_tokens[0][0] == token_id:
             removed = self.list_tokens.pop(0)
             return [removed[0], removed[1]]
         else:
             return ['ERROR', 'error']
 
-    def peek(self, token_id):
+    def peek(self) -> list:
         """Given a list of possible tokens, returns which ones could work with match but does not
         remove it from the list."""
-        if self.list_tokens[0][0] == token_id[0]:
-            return [self.list_tokens[0][0], self.list_tokens[0][1]]
-        else:
-            return ['ERROR', 'error']
+        self.ignore_ws()
+        return self.list_tokens[0][0]
 
-    def skip(self, *what):
+    def ignore_ws(self):
+        while self.list_tokens[0][0] == 'INDENT':  # lexical analyser eliminates spaces
+            self.list_tokens.pop(0)
+
+    def skip(self, *what: tuple) -> bool:
         """Function evaluates if first element in the given list of tokens equals the first element
         in the list of tokens of the object. If YES, it returns TRUE, if NOT, it pops the first element and
         tries again, and returns False if also first new element does not match."""
+
         for x in what:
-            if x != self.list_tokens[0]:
-                self.list_tokens.pop(0)
+            if x != 'INDENT':
+                self.ignore_ws()
 
             tok = self.list_tokens[0]
             if tok[0] != x:
                 return False
             else:
                 self.list_tokens.pop(0)
-
-        return True
+                return True
 
     def push(self, rule_token):
         """Pushes a token back on the token stream so that a later peek or match will return it."""
@@ -78,30 +83,3 @@ class Scanner(object):
 
     def done(self):
         return len(self.list_tokens) == 0
-
-
-code = [
-"def hello(x, y):",
-"    print(x + y)",
-"hello(10, 20)",
-]
-
-TOKENS = [
-        (re.compile(r"^def"),                    "DEF"),
-        (re.compile(r"^[a-zA-Z_][a-zA-Z0-9_]*"), "NAME"),
-        (re.compile(r"^[0-9]+"),                 "INTEGER"),
-        (re.compile(r"^\("),                     "LPAREN"),
-        (re.compile(r"^\)"),                     "RPAREN"),
-        (re.compile(r"^\+"),                     "PLUS"),
-        (re.compile(r"^:"),                      "COLON"),
-        (re.compile(r"^,"),                      "COMMA"),
-        (re.compile(r"^\s+"),                    "INDENT")
-]
-
-token_id = ["DEF", "NAME", "INTEGER", "LPAREN", "RPAREN", "PLUS", "COLON", "COMMA", "INDENT"]
-
-
-first_scanner = Scanner(TOKENS, code)
-first_scanner.match(token_id)
-first_scanner.skip(token_id)
-first_scanner.peek(token_id)
