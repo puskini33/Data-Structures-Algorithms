@@ -40,14 +40,19 @@ class Scanner(object):
     def match(self, token_id: str) -> list:
         """Given a list of possible tokens, returns the first one that matches the first token in the list
     and removes it."""
-        if token_id != 'INDENT':  # lexical analyser eliminates spaces
+        # indent = 0
+        # while token_id == 'SPACE':
+            # self.ignore_ws()
+            # indent += 1
+
+        if token_id != 'SPACE':  # lexical analyser eliminates spaces
             self.ignore_ws()
 
         if self.list_tokens[0][0] == token_id:
             removed = self.list_tokens.pop(0)
             return [removed[0], removed[1]]
-        else:
-            return ['ERROR', 'error']
+        # else:
+            # return ['ERROR', 'error']
 
     def peek(self) -> list:
         """Given a list of possible tokens, returns which ones could work with match but does not
