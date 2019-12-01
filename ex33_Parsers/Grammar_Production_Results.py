@@ -5,7 +5,7 @@ class FuncDef(object):
         self.params = params
 
     def __repr__(self):
-        return f'FUNCDEF{self.name, self.params}'  # dictionary is returned
+        return f'FUNCDEF{self.name, self.params}'
 
 
 class FuncCall(object):
@@ -41,4 +41,4 @@ class Plus(object):
         self.right = right
 
     def __repr__(self):
-        return f'left: {self.left} {self.plus} right: {self.right}'  # dictionary is returned
+        return f'left: {self.left} {self.plus} right: {self.right}'
