@@ -8,6 +8,16 @@ class FuncDef(object):
         return f'FUNCDEF{self.name, self.params}'
 
 
+class FuncBody(object):
+
+    def __init__(self, name, params):
+        self.name = name
+        self.params = params
+
+    def __repr__(self):
+        return f'   FUNCBODY: FUNCCALL{self.name, self.params}'
+
+
 class FuncCall(object):
 
     def __init__(self, name, params):
@@ -17,6 +27,7 @@ class FuncCall(object):
     def __repr__(self):
         return f'FUNCCALL{self.name, self.params}'
 
+
 class Parameters(object):
 
     def __init__(self, params):
@@ -25,6 +36,7 @@ class Parameters(object):
     def __repr__(self):
             return f'PARAMETERS: {self.params}'
 
+
 class Integer(object):
 
     def __init__(self, number):
@@ -32,6 +44,7 @@ class Integer(object):
 
     def __repr__(self):
         return f'INTEGER: {self.number}'
+
 
 class Plus(object):
 

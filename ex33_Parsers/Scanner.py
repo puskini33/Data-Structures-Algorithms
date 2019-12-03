@@ -40,19 +40,18 @@ class Scanner(object):
     def match(self, token_id: str) -> list:
         """Given a list of possible tokens, returns the first one that matches the first token in the list
     and removes it."""
-        # indent = 0
-        # while token_id == 'SPACE':
-            # self.ignore_ws()
-            # indent += 1
+        while token_id == 'SPACE':
+            self.ignore_ws()
 
         if token_id != 'SPACE':  # lexical analyser eliminates spaces
             self.ignore_ws()
 
-        if self.list_tokens[0][0] == token_id:
-            removed = self.list_tokens.pop(0)
-            return [removed[0], removed[1]]
-        # else:
-            # return ['ERROR', 'error']
+        try:
+            if self.list_tokens[0][0] == token_id:
+                removed = self.list_tokens.pop(0)
+                return [removed[0], removed[1]]
+        except None:
+            return [token_id, 'ERROR']
 
     def peek(self) -> list:
         """Given a list of possible tokens, returns which ones could work with match but does not
@@ -62,7 +61,7 @@ class Scanner(object):
 
     def ignore_ws(self):
         """Functions pops the INDENT token. The lexical analyser must remove all spaces."""
-        while self.list_tokens[0][0] == 'INDENT':
+        while self.list_tokens[0][0] == 'SPACE':
             self.list_tokens.pop(0)
 
     def skip(self, *what: tuple) -> bool:
@@ -70,7 +69,7 @@ class Scanner(object):
         in the list of tokens of the object. If YES, it returns TRUE, if NOT, it pops the first element and
         tries again, and returns False if also first new element does not match."""
         for x in what:
-            if x != 'INDENT':
+            if x != 'SPACE':
                 self.ignore_ws()
 
             tok = self.list_tokens[0]

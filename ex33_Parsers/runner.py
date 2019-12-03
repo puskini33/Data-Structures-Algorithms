@@ -1,8 +1,7 @@
 from parser_format import Parser
 from Scanner import Scanner
 from pprint import pprint
-import Grammar_Production_Results as rule
-import re
+import Grammar_Production_Results as Rule
 
 
 class Runner(object):
@@ -18,20 +17,11 @@ class Runner(object):
 
         if first == 'DEF':  # if the token list starts with DEF
             return self.function_definition()  # it is a function definition; call function
-        elif first == 'NAME':  # if the next element is NAME
-            try:
-                name = self.local_parser.match('NAME')  # match the name of the function and pop token
-            except ValueError:
-                return 'NAME of function could not be matched.'
-
-            second = self.local_parser.peek()  # peek at the next element
-
-            try:
-                if second == 'LPAREN':  # if next element is left parenthesis
-                    return self.function_call(name)  # this code follows the pattern of a function call
-            except SyntaxError:
-                print('Not a FUNCDEF or FUNCCALL')  # assertion error
-
+        elif first == 'INDENT':  # if the next element is NAME
+            self.local_parser.match('INDENT')
+            return self.func_body()
+        elif first == 'NAME':
+            return self.function_call(first)
 
     def function_definition(self):
         """funcdef = DEF name LPAREN params RPAREN COLON body
@@ -40,29 +30,17 @@ class Runner(object):
 
         self.local_parser.skip('DEF')  # discard def
 
-        try:
-            name = self.local_parser.match('NAME')  # matches NAME in the code
-        except ValueError:
-            return 'Name of function is not matched'
+        name = self.local_parser.match('NAME')  # matches NAME in the code
 
-        try:
-            self.local_parser.match('LPAREN')  # matches LPAREN in the code
-        except ValueError:
-            return 'LPAREN is not matched'
+        self.local_parser.match('LPAREN')  # matches LPAREN in the code
 
         params = self.parameters()  # list of parameters
 
-        try:
-            self.local_parser.match('RPAREN')  # matches RPAREN
-        except:
-            return 'RPAREN is not matched'
+        self.local_parser.match('RPAREN')  # matches RPAREN
 
-        try:
-            self.local_parser.match('COLON')  # matches COLON
-        except:
-            return 'COLON is not matched'
+        self.local_parser.match('COLON')  # matches COLON
 
-        return rule.FuncDef(name, params)
+        return Rule.FuncDef(name, params)
 
     def parameters(self):
         """params = expression *(COMMA expression)"""
@@ -72,30 +50,36 @@ class Runner(object):
             params.append(self.expression())  # append first parameter, append second parameter
             start = self.local_parser.peek()  # peek at next element
 
-            try:
-                if start != 'RPAREN':  # if RPAREN is not reached yet, so there must be another parameter
-                    self.local_parser.match('COMMA')  # match COMMA and pop it
-            except ValueError:
-                print('COMMA is not matched')
+            if start != 'RPAREN':  # if RPAREN is not reached yet, so there must be another parameter
+                self.local_parser.match('COMMA')  # match COMMA and pop it
 
-        return rule.Parameters(params)  # return parameters
+        return Rule.Parameters(params)  # return parameters
 
     def function_call(self, name):
         """funccall = name LPAREN params RPAREN"""
-        try:
-            lparen_value = self.local_parser.match('LPAREN')  # match LPAREN and pop token
-        except ValueError:
-            return 'LPAREN is not matched'
+
+        name = self.local_parser.match('NAME')  # peek at the next element
+
+        self.local_parser.match('LPAREN')  # match LPAREN and pop token
 
         params = self.parameters()  # list of parameters of the function
 
-        try:
-            rparen_value = self.local_parser.match('RPAREN')  # match RPAREN and pop token
-        except ValueError:
-            return 'RPAREN is not matched'
+        self.local_parser.match('RPAREN')  # match RPAREN and pop token
 
-        func_call_repr = rule.FuncCall(name, params)
+        func_call_repr = Rule.FuncCall(name, params)
         return func_call_repr
+
+    def func_body(self):
+        name = self.local_parser.match('NAME')  # peek at the next element
+
+        self.local_parser.match('LPAREN')  # match LPAREN and pop token
+
+        params = self.parameters()  # list of parameters of the function
+
+        self.local_parser.match('RPAREN')  # match RPAREN and pop token
+
+        func_body_repr = Rule.FuncBody(name, params)
+        return func_body_repr
 
     def expression(self):
         """expression = name / plus /integer"""
@@ -109,7 +93,7 @@ class Runner(object):
                     return name  # return name
             elif start == 'INTEGER':  # if it is integer
                 number = self.local_parser.match('INTEGER')  # match the integer and pop the token
-                number_repr = rule.Integer(number)
+                number_repr = Rule.Integer(number)
                 if self.local_parser.peek() == 'PLUS':  # if next token is PLUS
                     return self.plus(number_repr)  # as parameter is given the left argument of the addition
                 else:
@@ -121,7 +105,7 @@ class Runner(object):
         """plus = expression PLUS expression"""
         plus = self.local_parser.match('PLUS')  # match + and pop PLUS token
         right = self.expression()  # get the right element of the addition
-        plus_repr = rule.Plus(plus, left, right)
+        plus_repr = Rule.Plus(plus, left, right)
         return plus_repr
 
     def main(self):
@@ -146,7 +130,7 @@ TOKENS = [
         ((r"^\+"),                     "PLUS"),
         ((r"^:"),                      "COLON"),
         ((r"^,"),                      "COMMA"),
-        ((r"^((\s\s\s\s)|\t)\w"),      "INDENT"),
+        ((r"((\s\s\s\s)|\t)"),         "INDENT"),
         ((r"\s"),                      "SPACE")
 ]
 
