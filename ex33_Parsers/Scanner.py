@@ -17,8 +17,11 @@ class Scanner(object):
         for line in self.text_to_match:  # taking each line from the code to match
             i = 0
             while i < len(line):  # looping till the end of the string is reached
-                token, string, end = self.try_match(i, line)  # i = 3, line = code[0]
-                assert token, 'Failed to match line %s' % string
+                try:
+                    token, string, end = self.try_match(i, line)  # i = 3, line = code[0]
+                    assert token
+                except AssertionError:
+                    return 'Failed to match line %s' % string
 
                 if token:  # if a token is matched
                     i += end  # set the new index to take the unmatched string
