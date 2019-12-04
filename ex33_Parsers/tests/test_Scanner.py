@@ -1,6 +1,7 @@
 from Scanner import Scanner
 import unittest
 
+
 class ScannerTest(unittest.TestCase):
 
     def test_scanner(self):
@@ -32,8 +33,6 @@ tokens = [
         ((r"((\s\s\s\s)|\t)"),         "INDENT"),
         ((r"\s"),                      "SPACE")
 ]
-
-
 
 
 if __name__ == '__main__':

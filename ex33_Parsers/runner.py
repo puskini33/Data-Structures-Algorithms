@@ -117,31 +117,3 @@ class Runner(object):
             print('Index Error Exception Raised, list index out of range"')
         else:
             return results
-
-
-code = ["def hello(x, y):", "    print(x + y)", "hello(10, 20)"]
-
-TOKENS = [
-        ((r"^def"),                    "DEF"),
-        ((r"^[a-zA-Z_][a-zA-Z0-9_]*"), "NAME"),
-        ((r"^[0-9]+"),                 "INTEGER"),
-        ((r"^\("),                     "LPAREN"),
-        ((r"^\)"),                     "RPAREN"),
-        ((r"^\+"),                     "PLUS"),
-        ((r"^:"),                      "COLON"),
-        ((r"^,"),                      "COMMA"),
-        ((r"((\s\s\s\s)|\t)"),         "INDENT"),
-        ((r"\s"),                      "SPACE")
-]
-
-
-first_scanner = Scanner(TOKENS, code)
-print('List of tokens after lexical analysis contains: ')
-pprint(first_scanner.list_tokens)
-first_parser = Parser(first_scanner)
-trial = Runner(first_parser)
-main = trial.main()
-print()
-print()
-print('The parse tree after the syntactic analysis is: ')
-pprint(main)
