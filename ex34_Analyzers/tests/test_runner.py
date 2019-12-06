@@ -14,10 +14,7 @@ class TestRunner(unittest.TestCase):
         first_parser = Parser(first_scanner)
         trial = Runner(first_parser)
         main = trial.main()
-        print()
-        print()
-        print('The parse tree after the syntactic analysis is: ')
-        pprint(main)
+        return main
 
 
 code = ["def hello(x, y):", "    pprint(x + y)", "hello(10, 20)"]

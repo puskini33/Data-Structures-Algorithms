@@ -1,7 +1,7 @@
 from parser_format import Parser
 from Scanner import Scanner
-from pprint import pprint
-import Grammar_Production_Results as Rule
+import grammar_productions as Rule
+from analyzer import WorldState, Analyzer
 
 
 class Runner(object):
@@ -86,11 +86,12 @@ class Runner(object):
         start = self.local_parser.peek()  # peek at current element
         try:
             if start == 'NAME':  # if it is a name
-                name = self.local_parser.match('NAME')  # match NAME and pops it
+                name = self.local_parser.match('NAME')
+                name_repr =   Rule.Name(name)
                 if self.local_parser.peek() == 'PLUS':  # if next element is PLUS
-                    return self.plus(name)  # as parameter is given the left side of the addition
+                    return self.plus(name_repr)  # as parameter is given the left side of the addition
                 else:
-                    return name  # return name
+                    return name_repr  # return name representation
             elif start == 'INTEGER':  # if it is integer
                 number = self.local_parser.match('INTEGER')  # match the integer and pop the token
                 number_repr = Rule.Integer(number)
@@ -117,3 +118,29 @@ class Runner(object):
             print('Index Error Exception Raised, list index out of range"')
         else:
             return results
+
+
+code = ["def hello(x, y):", "    pprint(x + y)", "hello(10, 20)"]
+
+TOKENS = [
+            ((r"^def"),                    "DEF"),
+            ((r"^[a-zA-Z_][a-zA-Z0-9_]*"), "NAME"),
+            ((r"^[0-9]+"),                 "INTEGER"),
+            ((r"^\("),                     "LPAREN"),
+            ((r"^\)"),                     "RPAREN"),
+            ((r"^\+"),                     "PLUS"),
+            ((r"^:"),                      "COLON"),
+            ((r"^,"),                      "COMMA"),
+            ((r"((\s\s\s\s)|\t)"),         "INDENT"),
+            ((r"\s"),                      "SPACE")]
+
+first_scanner = Scanner(TOKENS, code)
+first_parser = Parser(first_scanner)
+trial = Runner(first_parser)
+local_runner = trial.main()
+print(local_runner)
+
+variables = {}
+general_state = WorldState(variables)
+local_analyzer = Analyzer(local_runner, general_state)
+local_analyzer.analyze()

@@ -58,7 +58,7 @@ class AddExpr(Expr):
 class PunyPyWorld(object):  # state of the world
 
     def __init__(self, variables):
-        self.variables = variables
+        self.variables = variables  # fill this with functions: print etc.
         self.functions = {}
 
 
