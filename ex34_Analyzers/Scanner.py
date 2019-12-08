@@ -56,11 +56,14 @@ class Scanner(object):
         except None:
             return [token_id, 'ERROR']
 
-    def peek(self) -> list:
+    def peek(self) -> list or str:
         """Given a list of possible tokens, returns which ones could work with match but does not
         remove it from the list."""
-        self.ignore_ws()
-        return self.list_tokens[0][0]
+        if not self.done():
+            self.ignore_ws()
+            return self.list_tokens[0][0]
+        else:
+            return 'ERROR'
 
     def ignore_ws(self):
         """Functions pops the INDENT token. The lexical analyser must remove all spaces."""

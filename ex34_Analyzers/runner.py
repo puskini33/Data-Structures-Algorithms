@@ -60,14 +60,18 @@ class Runner(object):
 
         name = self.local_parser.match('NAME')  # peek at the next element
 
-        self.local_parser.match('LPAREN')  # match LPAREN and pop token
+        second = self.local_parser.peek()
+        if second == 'EQUAL':
+            return self.equal(name)
+        else:
+            self.local_parser.match('LPAREN')  # match LPAREN and pop token
 
-        params = self.parameters()  # list of parameters of the function
+            params = self.parameters()  # list of parameters of the function
 
-        self.local_parser.match('RPAREN')  # match RPAREN and pop token
+            self.local_parser.match('RPAREN')  # match RPAREN and pop token
 
-        func_call_repr = Rule.FuncCall(name, params)
-        return func_call_repr
+            func_call_repr = Rule.FuncCall(name, params)
+            return func_call_repr
 
     def func_body(self):
         name = self.local_parser.match('NAME')  # peek at the next element
@@ -87,7 +91,7 @@ class Runner(object):
         try:
             if start == 'NAME':  # if it is a name
                 name = self.local_parser.match('NAME')
-                name_repr =   Rule.Name(name)
+                name_repr = Rule.Name(name)
                 if self.local_parser.peek() == 'PLUS':  # if next element is PLUS
                     return self.plus(name_repr)  # as parameter is given the left side of the addition
                 else:
@@ -95,6 +99,7 @@ class Runner(object):
             elif start == 'INTEGER':  # if it is integer
                 number = self.local_parser.match('INTEGER')  # match the integer and pop the token
                 number_repr = Rule.Integer(number)
+
                 if self.local_parser.peek() == 'PLUS':  # if next token is PLUS
                     return self.plus(number_repr)  # as parameter is given the left argument of the addition
                 else:
@@ -109,6 +114,18 @@ class Runner(object):
         plus_repr = Rule.Plus(plus, left, right)
         return plus_repr
 
+    def equal(self, left):
+        first_equal = self.local_parser.match('EQUAL')
+
+        right = self.local_parser.match('INTEGER')
+
+        plus = self.local_parser.peek()
+        if plus == 'PLUS':
+            plus_repr = self.plus(right)
+            return Rule.Equal(left, plus_repr)
+        else:
+            return 'ERROR'
+
     def main(self):
         results = []
         try:
@@ -116,11 +133,11 @@ class Runner(object):
                 results.append(self.root())  # go 1 time, 2 times, 3 times
         except LookupError:
             print('Index Error Exception Raised, list index out of range"')
-        else:
-            return results
+
+        return results
 
 
-code = ["def hello(x, y):", "    pprint(x + y)", "hello(10, 20)"]
+code = ["def hello(x, y):", "    pprint(x + y)", "x = 10 + 14"]
 
 TOKENS = [
             ((r"^def"),                    "DEF"),
@@ -132,7 +149,8 @@ TOKENS = [
             ((r"^:"),                      "COLON"),
             ((r"^,"),                      "COMMA"),
             ((r"((\s\s\s\s)|\t)"),         "INDENT"),
-            ((r"\s"),                      "SPACE")]
+            ((r"\s"),                      "SPACE"),
+            ((r"\="),                      "EQUAL")]
 
 first_scanner = Scanner(TOKENS, code)
 first_parser = Parser(first_scanner)

@@ -32,7 +32,6 @@ class Parameters(Production):
 
 
 class Expr(Production):
-    # it goes to Production.analyze I think
     pass
 
 
@@ -75,7 +74,6 @@ class PunyPyAnalyzer(object):   # take a parse tree and the world state and make
 
 variables = {}
 world = PunyPyWorld(variables)
-# simulate hello(10 + 20)
 script = [FuncCall('hello',
                 Parameters([
                     AddExpr(IntExpr(10), IntExpr(20))
