@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85184a80-ee48-4dd3-9e9f-e9dc52995b89" name="Default Changelist" comment="">
+    <list default="true" id="8d1962df-0ea2-4515-958d-3ca073a2cfe7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ex34_Analyzers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ex34_Analyzers/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,12 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1413">
-              <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
+            <state relative-caret-position="198">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -26,10 +26,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grammar_productions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3552">
+              <caret line="148" column="54" selection-start-line="148" selection-start-column="54" selection-end-line="148" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scanner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="185">
+              <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,30 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analyzer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar_productions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Rule</find>
-      <find>print</find>
+      <find>WorldState</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -75,10 +68,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/grammar_productions.py" />
         <option value="$PROJECT_DIR$/Scanner.py" />
         <option value="$PROJECT_DIR$/runner.py" />
-        <option value="$PROJECT_DIR$/grammar_productions.py" />
-        <option value="$PROJECT_DIR$/ex34a.py" />
       </list>
     </option>
   </component>
@@ -86,7 +78,7 @@
     <option name="files">
       <list>
         <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-        <option value="$PROJECT_DIR$/.idea/ex34_Analyzers.iml" />
+        <option value="$PROJECT_DIR$/.idea/ex35_Interpreters.iml" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/.idea/modules.xml" />
@@ -105,23 +97,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ex34_Analyzers" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ex34_Analyzers" type="462c0819:PsiDirectoryNode" />
+              <item name="ex35_Interpreters" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ex35_Interpreters" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex35_punypy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Carte_Exercitii" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -135,51 +126,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runner">
-    <configuration name="analyzer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ex34_Analyzers" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analyzer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ex34a" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ex34_Analyzers" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex34a.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="runner" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ex34_Analyzers" />
+      <module name="ex35_Interpreters" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -202,8 +151,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.runner" />
-        <item itemvalue="Python.ex34a" />
-        <item itemvalue="Python.analyzer" />
       </list>
     </recent_temporary>
   </component>
@@ -212,31 +159,31 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="85184a80-ee48-4dd3-9e9f-e9dc52995b89" name="Default Changelist" comment="" />
-      <created>1575575503506</created>
+      <changelist id="8d1962df-0ea2-4515-958d-3ca073a2cfe7" name="Default Changelist" comment="" />
+      <created>1576436601405</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575575503506</updated>
+      <updated>1576436601405</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16227607" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1654373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.21555555" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18444444" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.28666666" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -246,40 +193,38 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ex34a.py</url>
-          <line>82</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/analyzer.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/runner.py</url>
+          <line>206</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ex34a.py">
+    <entry file="file://$PROJECT_DIR$/analyzer.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Python/Lib/pprint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
+        <state relative-caret-position="181">
+          <caret line="393" selection-start-line="393" selection-end-line="393" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runner.py">
+    <entry file="file://$PROJECT_DIR$/grammar_productions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1413">
-          <caret line="143" column="43" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3552">
+          <caret line="148" column="54" selection-start-line="148" selection-start-column="54" selection-end-line="148" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scanner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="185">
+          <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -290,17 +235,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyzer.py">
+    <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar_productions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="198">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
