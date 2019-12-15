@@ -4,4 +4,4 @@ In this repository I add my code proposals to solve the problems set by Zed Shaw
 The book teaches about the topics:
 
 1. Data Structures and Algorithms
-2. Parsing Text: Finite State Machine, Scanner, Parser, Analyzer
+2. Parsing Text: Finite State Machine, Scanner, Parser, Analyzer, Interpreter
