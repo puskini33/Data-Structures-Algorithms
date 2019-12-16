@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8d1962df-0ea2-4515-958d-3ca073a2cfe7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ex35_Interpreters.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ex35_Interpreters.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scanner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar_productions.py" beforeDir="false" afterPath="$PROJECT_DIR$/grammar_productions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/.coverage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_Scanner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_runner.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +15,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runner.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="533">
@@ -31,20 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grammar_productions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -84,8 +71,8 @@
         <option value="$PROJECT_DIR$/../../Calculator/scanner.py" />
         <option value="$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex35_punypy/punypy/run.py" />
         <option value="$PROJECT_DIR$/analyzer.py" />
-        <option value="$PROJECT_DIR$/grammar_productions.py" />
         <option value="$PROJECT_DIR$/runner.py" />
+        <option value="$PROJECT_DIR$/grammar_productions.py" />
       </list>
     </option>
   </component>
@@ -100,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="875" />
     <option name="y" value="101" />
     <option name="width" value="1275" />
@@ -223,7 +210,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18444444" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18444444" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.28666666" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,20 +320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar_productions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
@@ -354,6 +327,20 @@
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar_productions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
         </state>
       </provider>
     </entry>
