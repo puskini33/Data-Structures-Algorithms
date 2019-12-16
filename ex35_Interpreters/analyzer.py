@@ -8,12 +8,7 @@ class Analyzer(object):
         self.world_state = world_state
 
     def analyze(self):
-        print()
-        print('Results of analyzer are: ')
-        print()
-        # analyzed_tree = []
         for node in self.parser_tree:
             node.analyze(self.world_state)
-            # analyzed_tree.append(analysis)
 
         return self.parser_tree

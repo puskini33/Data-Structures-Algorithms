@@ -13,20 +13,23 @@ class Runner(object):
         a parse tree."""
         self.local_parser = local_parser  # the Parser object is passed
 
-    def _invariant(self, match):
-        print(f'Syntax Error: Invalid Syntax: {match[1]}')
-        exit(1)
+    def _error(self, match):
+        if not match or match == 'ERROR':
+            print(f'Syntax Error during Parsing: Invalid Syntax')
+            exit(1)
+        else:
+            return
 
     def root(self):
         """root = *(funccal / funcdef)"""
         first = self.local_parser.peek()  # peek at first element in the list_tokens of local scanner
 
-        if first[0] == 'DEF':  # if the token list starts with DEF
+        if first == 'DEF':  # if the token list starts with DEF
             return self.function_definition()  # it is a function definition; call function
-        elif first[0] == 'NAME':
+        elif first == 'NAME':
             return self.function_call(first)
-        else:
-            self._invariant(first)
+        else:  # if match is ERROR
+            self._error(first)
 
     def function_definition(self):
         """funcdef = DEF name LPAREN params RPAREN COLON body
@@ -36,16 +39,16 @@ class Runner(object):
         self.local_parser.skip('DEF')  # discard def
 
         name = self.local_parser.match('NAME')  # matches NAME in the code
-
-        self.local_parser.match('LPAREN')  # matches LPAREN in the code
-
+        self._error(name)
+        lparen = self.local_parser.match('LPAREN')  # matches LPAREN in the code
+        self._error(lparen)
         params = self.parameters()  # list of parameters
 
-        self.local_parser.match('RPAREN')  # matches RPAREN
-
-        self.local_parser.match('COLON')  # matches COLON
-
-        body_repr = self.func_body()
+        rparen = self.local_parser.match('RPAREN')  # matches RPAREN
+        self._error(rparen)
+        colon = self.local_parser.match('COLON')  # matches COLON
+        self._error(colon)
+        body_repr = self.function_body()
 
         return Rule.FuncDef(name, params, body_repr)
 
@@ -53,86 +56,80 @@ class Runner(object):
         """params = expression *(COMMA expression)"""
         params = []
         start = self.local_parser.peek()  # peek at current element
-        while start[0] != 'RPAREN':  # while start is not RPAREN
+        self._error(start)
+        while start != 'RPAREN':  # while start is not RPAREN
             params.append(self.expression())  # append first parameter, append second parameter
             start = self.local_parser.peek()  # peek at next element
-
-            if start[0] != 'RPAREN':  # if RPAREN is not reached yet, so there must be another parameter
-                self.local_parser.match('COMMA')  # match COMMA and pop it
-
+            self._error(start)
+            if start != 'RPAREN':  # if RPAREN is not reached yet, so there must be another parameter
+                comma = self.local_parser.match('COMMA')  # match COMMA and pop it
+                self._error(comma)
         return Rule.Parameters(params)  # return parameters
 
-    def function_call(self, name):
+    def function_call(self, name=0):
         """funccall = name LPAREN params RPAREN"""
 
         name = self.local_parser.match('NAME')  # peek at the next element
-
+        self._error(name)
         second = self.local_parser.peek()
-        if second[0] == 'EQUAL':
+        self._error(second)
+        if second == 'EQUAL':
             return self.equal(name)
         else:
-            self.local_parser.match('LPAREN')  # match LPAREN and pop token
-
+            lparen = self.local_parser.match('LPAREN')  # match LPAREN and pop token
+            self._error(lparen)
             params = self.parameters()  # list of parameters of the function
 
-            self.local_parser.match('RPAREN')  # match RPAREN and pop token
-
+            rparen = self.local_parser.match('RPAREN')  # match RPAREN and pop token
+            self._error(rparen)
             func_call_repr = Rule.FuncCall(name, params)
             return func_call_repr
 
-    def func_body(self):
-        while self.local_parser.match('INDENT'):
-            name = self.local_parser.match('NAME')  # peek at the next element
-
-            self.local_parser.match('LPAREN')  # match LPAREN and pop token
-
-            params = self.parameters()  # list of parameters of the function
-
-            self.local_parser.match('RPAREN')  # match RPAREN and pop token
-
-            func_body_repr = Rule.FuncBody(name, params)
-            return func_body_repr
+    def function_body(self):
+        body = []
+        while self.local_parser.skip("INDENT"):
+            body.append(self.function_call())
+        return body
 
     def expression(self):
         """expression = name / plus /integer"""
         start = self.local_parser.peek()  # peek at current element
-        try:
-            if start[0] == 'NAME':  # if it is a name
-                name = self.local_parser.match('NAME')
-                name_repr = Rule.Name(name)
-                if self.local_parser.peek()[0] == 'PLUS':  # if next element is PLUS
-                    return self.plus(name_repr)  # as parameter is given the left side of the addition
-                else:
-                    return name_repr  # return name representation
-            elif start[0] == 'INTEGER':  # if it is integer
-                number = self.local_parser.match('INTEGER')  # match the integer and pop the token
-                number_repr = Rule.Integer(number)
+        self._error(start)
 
-                if self.local_parser.peek()[0] == 'PLUS':  # if next token is PLUS
-                    return self.plus(number_repr)  # as parameter is given the left argument of the addition
-                else:
-                    return number_repr
-        except SyntaxError:
-            print('Syntax error %r' % start)
+        if start == 'NAME':  # if it is a name
+            name = self.local_parser.match('NAME')
+            name_repr = Rule.Name(name)
+            if self.local_parser.peek() == 'PLUS':  # if next element is PLUS
+                return self.plus(name_repr)  # as parameter is given the left side of the addition
+            else:
+                return name_repr  # return name representation
+        elif start == 'INTEGER':  # if it is integer
+            number = self.local_parser.match('INTEGER')  # match the integer and pop the token
+            number_repr = Rule.Integer(number)
+
+            if self.local_parser.peek() == 'PLUS':  # if next token is PLUS
+                return self.plus(number_repr)  # as parameter is given the left argument of the addition
+            else:
+                return number_repr
 
     def plus(self, left):
         """plus = expression PLUS expression"""
         plus = self.local_parser.match('PLUS')  # match + and pop PLUS token
+        self._error(plus)
         right = self.expression()  # get the right element of the addition
         plus_repr = Rule.Addition(left, right)
         return plus_repr
 
     def equal(self, left):
-        first_equal = self.local_parser.match('EQUAL')
-
+        equal = self.local_parser.match('EQUAL')
+        self._error(equal)
         right = self.local_parser.match('INTEGER')
+        self._error(right)
 
         plus = self.local_parser.peek()
-        if plus[0] == 'PLUS':
-            plus_repr = self.plus(right)
-            return Rule.Equal(left, plus_repr)
-        else:
-            return 'ERROR'
+        self._error(plus)
+        plus_repr = self.plus(right)
+        return Rule.Equal(left, plus_repr)
 
     def main(self):
         results = []
@@ -153,39 +150,14 @@ class WorldState(object):
         self.functions['print'] = Rule.PrintFuncDef()
 
     def clone(self):
-        """This function implements scope.
-        Remember “scope” is the idea that the
-x, y in hello(x, y) do not impact an x or y variable you define outside the hello function."""
+        """Sort of a lame way to implement scope."""
         temp = WorldState(self.variables.copy())
         temp.functions = self.functions
         return temp
 
-    def add_variable(self, variable):
-        if variable not in self.variables:
-            self.variables['name'] = variable
-        return
-
-    def add_function(self, function):
-        if function not in self.functions:
-            self.functions['name'] = function
-        return
-
-    def check_existence_variable(self, variable_name):
-        try:
-            assert variable_name in self.variables
-        except AssertionError:
-            return 'DefinitionError: Variable is not defined.'
-
-    def run_function(self, function_name):
-        try:
-            assert function_name in self.functions
-        except AssertionError:
-            return 'DefinitionError: Function not defined.'
-        return function_name()
 
 
-
-code = ["def hello(x, y):", "    pprint(x + y)", "hello(10, 14)"]
+code = ["def hello(x, y):", "    print(x + y)", "hello(10, 14)"]
 
 TOKENS = [
             ((r"^def"),                    "DEF"),
@@ -211,5 +183,7 @@ print(parse_tree)
 general_state = WorldState({})
 local_analyzer = Analyzer(parse_tree, general_state)
 analyzed_tree = local_analyzer.analyze()
-local_interpreter = Interpreter(analyzed_tree, general_state)
-local_interpreter.interpret()
+print()
+print('Result is: ')
+for prod in analyzed_tree:
+    prod.interpret(general_state)

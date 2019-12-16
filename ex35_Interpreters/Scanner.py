@@ -57,14 +57,14 @@ class Scanner(object):
                 removed = self.list_tokens.pop(0)
                 return [removed[0], removed[1]]
         except None:
-            return ['ERROR', 'ERROR']
+            return 'ERROR'
 
     def peek(self) -> list or str:
         """Given a list of possible tokens, returns which ones could work with match but does not
         remove it from the list."""
         if not self.done():
             self.ignore_ws()
-            return self.list_tokens[0]
+            return self.list_tokens[0][0]
         else:
             return 'ERROR'
 

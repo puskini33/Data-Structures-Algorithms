@@ -1,3 +1,6 @@
+from sys import exit
+
+
 class Production(object):
     def analyze(self, world):
         """Implement your analyzer here."""
@@ -14,10 +17,10 @@ class FuncDef(Production):
         self.body = body
 
     def __repr__(self):
-        return f'FUNCDEF({self.name}({self.params}): {self.body})'
+        return f'FUNCDEF({self.name}({self.params}): \t {self.body})'
 
     def call(self, world, params):
-        params = params or Parameters(params)
+        params = params or Parameters()
 
         scope = world.clone()
         for i, p in enumerate(self.params.expressions):
@@ -28,20 +31,6 @@ class FuncDef(Production):
 
     def analyze(self, world_state):
         world_state.functions[self.name] = self
-        self.params.analyze(world_state)
-
-    def interpret(self, world_state):  # where should this step go
-        self.params.interpret(world_state)
-
-
-class FuncBody(Production):
-
-    def __init__(self, name, params):
-        self.name = name[1]
-        self.params = params
-
-    def __repr__(self):
-        return f'\n    FUNCBODY({self.name}({self.params}))'
 
 
 class FuncCall(Production):
@@ -54,30 +43,32 @@ class FuncCall(Production):
         return f'\n\nFUNCCALL({self.name}({self.params}))'
 
     def analyze(self, world_state):
-        self.params.analyze(world_state)
+        try:
+            if self.name in world_state.functions:
+                self.params.analyze(world_state)
+        except KeyError:
+            print('Syntax Error: Undefined function. Function cannot be called.')
+            exit(1)
 
     def interpret(self, world_state):
-        # funcdef = world_state.functions[self.name]
-        # funcdef.call(world_state, self.params)
-
-        self.params.interpret(world_state)
+        funcdef = world_state.functions.get(self.name)
+        funcdef.call(world_state, self.params)
 
 
 class Parameters(Production):
 
     def __init__(self, params):
-        self.params = params
+        self.expressions = params
 
     def __repr__(self):
-            return f'PARAMETERS: {self.params}'
+            return f'PARAMETERS: {self.expressions}'
 
     def analyze(self, world_state):
-        for expr in self.params:
+        for expr in self.expressions:
             expr.analyze(world_state)
 
     def interpret(self, world_state):
-        for expr in self.params:
-            expr.interpret(world_state)
+        return [x.interpret(world_state) for x in self.expressions]
 
 
 class Expressions(Production):
@@ -93,25 +84,23 @@ class Name(Expressions):
         return f'NameExpr({self.name})'
 
     def analyze(self, world_state):
-        pass
+        world_state.variables[self.name] = self
 
     def interpret(self, world_state):
-        print(f'NAME: {self.name}')
+        ref = world_state.variables.get(self.name)
+        return ref.interpret(world_state)
 
 
 class Integer(Expressions):
 
     def __init__(self, number):
-        self.number = number[1]
+        self.number = int(number[1])
 
     def __repr__(self):
         return f'IntExpr({self.number})'
 
-    # def analyze(self, world_state):
-        # print(f'INTEGER: {self.number}')
-
     def interpret(self, world_state):
-        print(f'INTEGER: {self.number}')
+        return self.number
 
 
 class Addition(Expressions):
@@ -124,13 +113,11 @@ class Addition(Expressions):
         return f'AddExpr({self.left}, {self.right})'
 
     def analyze(self, world_state):
-        self.left.analyze()
-        self.right.analyze()
+        self.left.analyze(world_state)
+        self.right.analyze(world_state)
 
-    def interpret(self, world_state):  # where should this step go
-        print(f'{self.left} + {self.right} = ')
-        result = f'{self.left} + {self.right}'
-        print(result)
+    def interpret(self, world_state):
+        return self.left.interpret(world_state) + self.right.interpret(world_state)
 
 
 class Equal(Expressions):
@@ -141,9 +128,6 @@ class Equal(Expressions):
 
     def __repr__(self):
         return f'Equality({self.left}, {self.right})'
-
-    # def analyze(self, world_state):
-        # print(f'EQUALITY: {self.left} = {self.right}')
 
     def interpret(self, world_state):
         print(f'EQUALITY: {self.left} = {self.right}')

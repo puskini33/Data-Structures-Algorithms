@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/ex35_Interpreters.iml" filepath="$PROJECT_DIR$/.idea/ex35_Interpreters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex35_punypy/.idea/ex35_punypy.iml" filepath="$PROJECT_DIR$/../../ZedGithubSolutions/learn-more-python-the-hard-way-solutions-master/ex35_punypy/.idea/ex35_punypy.iml" />
     </modules>
   </component>
 </project>
